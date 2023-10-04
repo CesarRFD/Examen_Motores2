@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - EnterGate1
+  - EnterGate2
+  - EnterGate3
+  - ExitGate
+  - FinalGate
   layers:
   - Default
   - TransparentFX
