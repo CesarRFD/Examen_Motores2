@@ -9,11 +9,6 @@ public class PauseMenu : MonoBehaviour
     public static bool GameIsPaused = false;
     [SerializeField] private GameObject pauseMenuUI;
 
-    void Start()
-    {
-        
-    }
-
     void Update(){
         if (Input.GetKeyDown(KeyCode.Escape))
         {
