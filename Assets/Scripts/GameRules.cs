@@ -26,6 +26,9 @@ public class GameRules : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        setStateGate1();
+        setStateGate2();
+        setStateGate3();
         enemys1 = GameObject.FindGameObjectsWithTag("Enemy1");
         enemysCount1 = enemys1.Length;
 
