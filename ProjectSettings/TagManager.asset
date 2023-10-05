@@ -12,6 +12,7 @@ TagManager:
   - Enemy1
   - Enemy2
   - Enemy3
+  - Sword
   layers:
   - Default
   - TransparentFX
