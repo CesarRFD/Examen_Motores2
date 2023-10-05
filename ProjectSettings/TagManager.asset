@@ -9,6 +9,10 @@ TagManager:
   - EnterGate3
   - ExitGate
   - FinalGate
+  - Enemy1
+  - Enemy2
+  - Enemy3
+  - Sword
   layers:
   - Default
   - TransparentFX
