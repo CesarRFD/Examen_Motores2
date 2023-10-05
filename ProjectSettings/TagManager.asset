@@ -9,6 +9,9 @@ TagManager:
   - EnterGate3
   - ExitGate
   - FinalGate
+  - Enemy1
+  - Enemy2
+  - Enemy3
   layers:
   - Default
   - TransparentFX
