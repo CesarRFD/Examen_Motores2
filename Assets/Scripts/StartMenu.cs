@@ -7,7 +7,7 @@ public class StartMenu : MonoBehaviour
 {
     public void Play()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene("Level");
     }
 
     public void Exit()
@@ -17,6 +17,6 @@ public class StartMenu : MonoBehaviour
 
     public void InitialMenu()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
+        SceneManager.LoadScene("Menu");
     }
 }
