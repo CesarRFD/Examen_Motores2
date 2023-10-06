@@ -7046,7 +7046,7 @@ GameObject:
   - component: {fileID: 1536923387}
   m_Layer: 0
   m_Name: ExitGate 3
-  m_TagString: ExitGate
+  m_TagString: ExitGate3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8117,7 +8117,7 @@ GameObject:
   - component: {fileID: 1788890073}
   m_Layer: 0
   m_Name: ExitGate 2
-  m_TagString: ExitGate
+  m_TagString: ExitGate2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

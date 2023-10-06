@@ -19,7 +19,7 @@ public class Enemigo3 : MonoBehaviour
     {
         if (enterGatesFunction.GetZone3())
         {
-            StartCoroutine(Delay(3f));
+            StartCoroutine(Delay(1.5f));
 
         }
     }
