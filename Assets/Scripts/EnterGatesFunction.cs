@@ -15,19 +15,19 @@ public class EnterGatesFunction : MonoBehaviour
         if (collision.gameObject.tag == "EnterGate1")
         {
             cam.transform.position = new Vector3(-21, 0, -10);
-            this.transform.position = new Vector3(-14, 0, 0);
+            this.transform.position = new Vector3(-12.56f, 0, 0);
             zone1 = true;
         }
         if (collision.gameObject.tag == "EnterGate2")
         {
             cam.transform.position = new Vector3(0, -13, -10);
-            this.transform.position = new Vector3(0, -10.5f, 0);
+            this.transform.position = new Vector3(0, -8.55f, 0);
             zone2 = true;
         }
         if (collision.gameObject.tag == "EnterGate3")
         {
             cam.transform.position = new Vector3(21, 0, -10);
-            this.transform.position = new Vector3(14, 0, 0);
+            this.transform.position = new Vector3(12.52f, 0, 0);
             zone3 = true;
         }
         if (collision.gameObject.tag == "ExitGate")
