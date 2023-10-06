@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemigo1 : MonoBehaviour
 {
     // Start is called before the first frame update
-    private float speed = 3;
+    private float speed = 1;
     [SerializeField] private GameObject player;
     [SerializeField] private EnterGatesFunction enterGatesFunction;
 
