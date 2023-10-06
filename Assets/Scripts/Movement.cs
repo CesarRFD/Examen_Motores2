@@ -9,9 +9,11 @@ public class Movement : MonoBehaviour
     [SerializeField] private float vertical;
     [SerializeField] private float speed = 3;
     [SerializeField] private GameObject sword;
+    [SerializeField] private SpriteRenderer swordSprite;
+    [SerializeField] private BoxCollider2D swordCollider;
 
-    float newPosX = 1f;
-    float newPosY = -0.15f;
+    float newPosX = 0f;
+    float newPosY = 0f;
 
     private void Awake()
     {
@@ -20,11 +22,10 @@ public class Movement : MonoBehaviour
 
     void Start()
     {
-        anim = GetComponent<Animator>();
+        //anim = GetComponent<Animator>();
         //sword = GameObject.Find("Sword");
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Z))
@@ -42,7 +43,7 @@ public class Movement : MonoBehaviour
         vertical = Input.GetAxisRaw("Vertical");
         transform.Translate(horizontal * speed * Time.deltaTime, vertical * speed * Time.deltaTime, 0);
 
-        if (horizontal>0)
+       if (horizontal>0)
         {
             Debug.Log("derecha");
             anim.SetFloat("IdleX", 1f);
@@ -82,11 +83,14 @@ public class Movement : MonoBehaviour
             swordPos.localPosition = new Vector3(newPosX, newPosY, relativePosition.z);
             targetObject.transform.rotation = Quaternion.Euler(0f, 0f, 90f);
         }
+
     }
     IEnumerator Attack(float Tiempo)
     {
-        sword.SetActive(true);
+        swordCollider.enabled = true;
+        swordSprite.enabled = true;
         yield return new WaitForSeconds(Tiempo);
-        sword.SetActive(false);
+        swordCollider.enabled= false;
+        swordSprite.enabled= false;
     }
 }
