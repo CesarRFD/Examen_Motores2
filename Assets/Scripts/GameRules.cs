@@ -17,6 +17,7 @@ public class GameRules : MonoBehaviour
     [SerializeField] private bool stateGate1 = false;
     [SerializeField] private bool stateGate2 = false;
     [SerializeField] private bool stateGate3 = false;
+    [SerializeField] private bool finalGate = false;
 
     void Start()
     {
@@ -29,6 +30,7 @@ public class GameRules : MonoBehaviour
         setStateGate1();
         setStateGate2();
         setStateGate3();
+        setFinalGate();
         enemys1 = GameObject.FindGameObjectsWithTag("Enemy1");
         enemysCount1 = enemys1.Length;
 
@@ -50,6 +52,14 @@ public class GameRules : MonoBehaviour
         {
             stateGate3 = true;
         }
+        if(stateGate1 == false || stateGate2 == false || stateGate3 == false)
+        {
+            finalGate = false;
+        }
+        else
+        {
+            finalGate = true;
+        }
     }
     public bool setStateGate1()
     {
@@ -62,5 +72,9 @@ public class GameRules : MonoBehaviour
     public bool setStateGate3()
     {
         return stateGate3;
+    }
+    public bool setFinalGate()
+    {
+        return finalGate;
     }
 }

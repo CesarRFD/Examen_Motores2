@@ -6,7 +6,6 @@ public class ExitGatesFunction : MonoBehaviour
 {
     [SerializeField] private BoxCollider2D[] gates;
     [SerializeField] private GameRules gameRules;
-    [SerializeField] private BoxCollider2D finalGate;
 
     private bool stateGate1;
     private bool stateGate2;
@@ -17,46 +16,28 @@ public class ExitGatesFunction : MonoBehaviour
         gates[0].enabled = false;
         gates[1].enabled = false;
         gates[2].enabled = false;
+        gates[3].enabled = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        getStateGate1();
-        getStateGate2();
-        getStateGate3();
-
-        if(stateGate1 == true)
+        if(gameRules.setStateGate1())
         {
             gates[0].enabled = true;
         }
-        if (stateGate2 == true)
+        if (gameRules.setStateGate2())
         {
             gates[1].enabled = true;
         }
-        if (stateGate3 == true)
+        if (gameRules.setStateGate3())
         {
             gates[2].enabled = true;
         }
 
-        if (gates[0] == true && gates[1] == true && gates[2] == true)
+        if (gameRules.setFinalGate())
         {
-            finalGate.enabled = true;
+            gates[3].enabled = true;
         }
-    }
-    public bool getStateGate1()
-    {
-        stateGate1 = gameRules.setStateGate1();
-        return stateGate1;
-    }
-    public bool getStateGate2()
-    {
-        stateGate2 = gameRules.setStateGate2();
-        return stateGate2;
-    }
-    public bool getStateGate3()
-    {
-        stateGate3 = gameRules.setStateGate3();
-        return stateGate3;
     }
 }
