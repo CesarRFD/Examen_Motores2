@@ -32,6 +32,7 @@ public class Movement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Z))
         {
             StartCoroutine(Attack(.1f));
+            StartCoroutine(AttackF(.1f));
         }
 
         GameObject targetObject = GameObject.FindWithTag("Sword");
@@ -83,9 +84,13 @@ public class Movement : MonoBehaviour
         IEnumerator Attack(float Tiempo)
         {
             swordCollider.enabled = true;
-            swordSprite.enabled = true;
             yield return new WaitForSeconds(Tiempo);
             swordCollider.enabled = false;
+        }
+        IEnumerator AttackF(float Tiempo)
+        {
+            swordSprite.enabled = true;
+            yield return new WaitForSeconds(Tiempo);
             swordSprite.enabled = false;
         }
 

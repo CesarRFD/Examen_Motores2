@@ -19,7 +19,13 @@ public class Enemigo2 : MonoBehaviour
     {
         if (enterGatesFunction.GetZone2())
         {
-            transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
+            StartCoroutine(Delay(3f));
+
         }
+    }
+    IEnumerator Delay(float Tiempo)
+    {
+        yield return new WaitForSeconds(Tiempo);
+        transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
     }
 }

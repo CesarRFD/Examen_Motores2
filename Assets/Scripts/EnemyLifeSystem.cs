@@ -17,7 +17,6 @@ public class EnemyLifeSystem : MonoBehaviour
             // Destruye el objeto del jugador
             Destroy(collision.gameObject);
             gg.SetActive(true);
-            Time.timeScale = 0f;
         }
     }
 }

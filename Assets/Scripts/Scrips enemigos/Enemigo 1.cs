@@ -12,7 +12,7 @@ public class Enemigo1 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -20,7 +20,13 @@ public class Enemigo1 : MonoBehaviour
     {
         if (enterGatesFunction.GetZone1())
         {
-            transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
+            StartCoroutine(Delay(3f));
+            
         }
+    }
+    IEnumerator Delay(float Tiempo)
+    {
+        yield return new WaitForSeconds(Tiempo);
+        transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
     }
 }
