@@ -6,6 +6,7 @@ public class ExitGatesFunction : MonoBehaviour
 {
     [SerializeField] private BoxCollider2D[] gates;
     [SerializeField] private GameRules gameRules;
+    [SerializeField] private SpriteRenderer backGround;
 
     private bool stateGate1;
     private bool stateGate2;
@@ -38,6 +39,7 @@ public class ExitGatesFunction : MonoBehaviour
         if (gameRules.setFinalGate())
         {
             gates[3].enabled = true;
+            backGround.enabled = true;
         }
     }
 }

@@ -17,6 +17,7 @@ public class StartMenu : MonoBehaviour
 
     public void InitialMenu()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene("Menu");
     }
 }
