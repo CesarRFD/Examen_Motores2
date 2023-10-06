@@ -14,8 +14,6 @@ TagManager:
   - Enemy3
   - Sword
   - SwordObj
-  - ExitGate2
-  - ExitGate3
   layers:
   - Default
   - TransparentFX

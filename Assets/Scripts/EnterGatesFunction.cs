@@ -33,17 +33,7 @@ public class EnterGatesFunction : MonoBehaviour
         if (collision.gameObject.tag == "ExitGate")
         {
             cam.transform.position = new Vector3(0, 0, -10);
-            this.transform.position = new Vector3(-8f, 0, 0);
-        }
-        if (collision.gameObject.tag == "ExitGate2")
-        {
-            cam.transform.position = new Vector3(0, 0, -10);
-            this.transform.position = new Vector3(0, -2.75f, 0);
-        }
-        if (collision.gameObject.tag == "ExitGate3")
-        {
-            cam.transform.position = new Vector3(0, 0, -10);
-            this.transform.position = new Vector3(8f, 0, 0);
+            this.transform.position = new Vector3(0, 0, 0);
         }
         if (collision.gameObject.tag == "FinalGate")
         {
